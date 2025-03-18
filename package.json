@@ -1,4 +1,9 @@
 {
+    "name": "dnd-battlemaps",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "webpack --mode production"
+    },
   "dependencies": {
     "firebase": "^11.3.1"
   }
