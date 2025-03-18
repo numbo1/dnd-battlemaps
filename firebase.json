@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "your-dnd-companion",
     "public": "public",
     "ignore": [
       "firebase.json",
