@@ -1,45 +1,80 @@
 @font-face {
     font-family: 'dragon-hunter-font';
     src: url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf');
-    src: url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('embedded-opentype'),
-         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('woff'),
-         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('truetype'),
-         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-body{
+
+body {
     background-color: black;
     font-family: 'dragon-hunter-font', 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #d8a444;
 }
-.which_flex{
+
+/* Role selection heading */
+.role-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 10px rgba(216, 164, 68, 0.8);
+}
+
+/* Role selection container */
+.which_flex {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 3rem;
-    margin-top: 8rem;
+    margin-top: 4rem;
     max-width: 120rem;
-}
-
-#dm_btn{
-    background-color: rgb(1, 63, 179);
-    padding: 3rem;
-    width: 15rem;
-    text-align: center;     
-    align-content: center;
-    color: #d8a444;
-    font-size: 2rem;
-    border-style: solid;
-}
-
-#adv_btn{
-    background-color: rgb(43, 158, 87);
-    padding: 3rem;
-    width: 15rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    align-content: center;
+}
+
+/* Role Buttons - Now Using Images */
+.role_btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem; /* Adjust size as needed */
+    height: auto;
+    text-decoration: none;
+}
+
+/* Circular Image */
+.role_btn img {
+    width: 15rem; /* Same as button width */
+    height: 15rem; /* Keep square for circles */
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Role Name (Initially Hidden) */
+.role_name {
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #d8a444;
-    font-size: 2rem;
-    border-style: solid;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect: Show Name */
+.role_btn:hover .role_name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effect: Slight Scale on Image */
+.role_btn:hover img {
+    transform: scale(1.1);
 }

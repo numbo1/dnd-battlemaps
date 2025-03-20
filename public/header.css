@@ -32,3 +32,16 @@ header{
 a{
     text-decoration: none;
 }
+#logo img {
+    width: 100px; /* Try a slightly smaller size */
+    height: auto;
+    display: block;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
