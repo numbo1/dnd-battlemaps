@@ -11,10 +11,14 @@
 }
 body{
     margin: 0;
+    background-color: black;
+    font-family: 'dragon-hunter-font', 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #d8a444;
 }
 header{
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     background-color: white;
     padding: 0.5rem;
@@ -33,9 +37,7 @@ a{
     text-decoration: none;
 }
 #logo img {
-    width: 100px; /* Try a slightly smaller size */
-    height: auto;
-    display: block;
+    width: 15rem;
 }
 
 #logo {

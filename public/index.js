@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const dmButton = document.querySelector(".role_btn[href='dungeon_master.html']");
     const advButton = document.querySelector(".role_btn[href='character.html']");
 
-    const dmBg = "url('Background.png')"; // Change this to your DM image
-    const advBg = "url('Background2.png')"; // Change this to your Adventurer image
+    const dmBg = "url('images/dmBackground.png')"; // Change this to your DM image
+    const advBg = "url('images/advBackground.png')"; // Change this to your Adventurer image
 
     // Set default background
     body.style.backgroundImage = "none";
