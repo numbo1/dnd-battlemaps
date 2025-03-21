@@ -17,6 +17,12 @@ function changeHeight(size) {
     characterTable.className = "character-table " + size;
 }
 
+function randomizeStats() {
+    document.getElementById("str").innerText = Math.floor(Math.random() * 10) + 8;
+    document.getElementById("dex").innerText = Math.floor(Math.random() * 10) + 8;
+    document.getElementById("int").innerText = Math.floor(Math.random() * 10) + 8;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const features = {
         hair: ["hair1.png", "hair2.png"],
@@ -77,49 +83,4 @@ document.addEventListener("DOMContentLoaded", () => {
         heightSelect.appendChild(opt);
     });
     document.getElementById("height-options").appendChild(heightSelect);
-    });
-function changeStat(stat, value) {
-    let currentStat = document.getElementById(stat);
-    let newValue = parseInt(currentStat.innerText) + value;
-    if (newValue >= 0) { // Ensure the value does not go below 0
-      currentStat.innerText = newValue;
-    }
-}
-let availablePoints = 10; // Initial stat points in the bank
-
-// Function to handle changing stats
-function changeStat(stat, value) {
-  const currentStat = document.getElementById(stat);
-  const pointsDisplay = document.getElementById("Points");
-
-  // Get the current stat value
-  let currentStatValue = parseInt(currentStat.innerText);
-  
-  // Check if the value we want to add or subtract is within the available stat points
-  if (value === 1 && availablePoints > 0) {
-    // Increase the stat
-    currentStat.innerText = currentStatValue + 1;
-    availablePoints -= 1; // Decrease available points
-  } else if (value === -1 && currentStatValue > 0) {
-    // Decrease the stat (but not below 0)
-    currentStat.innerText = currentStatValue - 1;
-    availablePoints += 1; // Increase available points
-  }
-
-  // Update the Stat Points Bank
-  pointsDisplay.innerText = availablePoints;
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Attach event listeners to each stat button
-  const buttons = document.querySelectorAll('button');
-
-  // Loop through each button and add event listeners
-  buttons.forEach(button => {
-    button.addEventListener('click', function () {
-      const stat = this.parentElement.querySelector('span').id;
-      const value = parseInt(this.innerText === "+" ? 1 : -1); // Determine if the button clicked is +1 or -1
-      changeStat(stat, value);
-    });
-  });
 });

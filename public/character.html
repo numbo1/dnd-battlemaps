@@ -118,12 +118,43 @@
                 <option value="cleric">Cleric</option>
             </select>
 
-            <h3>Stats</h3>
-            <p>Strength: <span id="str">10</span></p>
-            <p>Dexterity: <span id="dex">10</span></p>
-            <p>Intelligence: <span id="int">10</span></p>
+            <h3>Stat Points: <span id="Points">10</span></h3> <!-- Stat Points Bank -->
 
-            <button onclick="randomizeStats()">Randomize Stats</button>
+            <p>Strength: 
+              <button onclick="changeStat('str', -1)">-</button>
+              <span id="str">10</span> 
+              <button onclick="changeStat('str', 1)">+</button>
+            </p>
+          
+            <p>Dexterity: 
+              <button onclick="changeStat('dex', -1)">-</button>
+              <span id="dex">10</span> 
+              <button onclick="changeStat('dex', 1)">+</button>
+            </p>
+          
+            <p>Constitution: 
+              <button onclick="changeStat('con', -1)">-</button>
+              <span id="con">10</span> 
+              <button onclick="changeStat('con', 1)">+</button>
+            </p>
+          
+            <p>Wisdom: 
+              <button onclick="changeStat('wis', -1)">-</button>
+              <span id="wis">10</span> 
+              <button onclick="changeStat('wis', 1)">+</button>
+            </p>
+          
+            <p>Intelligence: 
+              <button onclick="changeStat('int', -1)">-</button>
+              <span id="int">10</span> 
+              <button onclick="changeStat('int', 1)">+</button>
+            </p>
+          
+            <p>Charisma: 
+              <button onclick="changeStat('cha', -1)">-</button>
+              <span id="cha">10</span> 
+              <button onclick="changeStat('cha', 1)">+</button>
+            </p>
         </div>
     </div>
     

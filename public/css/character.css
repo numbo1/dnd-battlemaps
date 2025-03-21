@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #292929;
+    padding: 10px;
+    position: relative;
+    border-bottom: 2px solid #d8a444;
+}
+
+/* D&D Logo (Centered) */
+#logo img {
+    height: 80px;
+    transition: transform 0.2s ease;
+}
+
+#logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto; /* Added margin to prevent overlap */
+}
+
+/* Left Panel */
+.left-panel {
+    width: 25%;
+    text-align: left;
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 10px;
+}
+
+/* Center Panel */
+.center-panel {
+    width: 40%;
+    text-align: center;
+}
+
+/* Make character table centered */
+.character-table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.character-table img {
+    width: 120px;
+    height: auto;
+}
+
+/* Ensure character parts are layered properly */
+.character-cell {
+    position: relative; /* Allows stacking of images */
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+}
+
+/* Stack images inside table cells */
+.character-cell img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the images */
+    width: 100px; /* Adjust size as needed */
+}
+
+/* Right Panel */
+.right-panel {
+    width: 25%;
+    text-align: left;
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #d8a444;
+    color: black;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b5832d;
+}
+
+/* Select Dropdowns */
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Height Change */
+.small img {
+    transform: scale(0.8);
+}
+
+.medium img {
+    transform: scale(1);
+}
+
+.tall img {
+    transform: scale(1.2);
+}

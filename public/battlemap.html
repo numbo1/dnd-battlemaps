@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Master Panel</title>
+    <link rel="stylesheet" href="css/dm.css">
+</head>
+<body>
+
+    <!-- Header with Centered Logo -->
+    <header>
+        <a href="index.html" id="logo">
+            <img src="Images/Logo.png" alt="D&D Logo">
+        </a>
+    </header>
+
+    <div class="container">
+
+        <div class="left-panel">
+            <h2>Dungeon Tools</h2>
+
+            <h3>Manage Encounters</h3>
+            <button onclick="generateEncounter()">Generate Encounter</button>
+
+            <h3>Initiative Tracker</h3>
+            <button onclick="startInitiative()">Start Initiative</button>
+
+            <h3>Map Controls</h3>
+            <button onclick="toggleGrid()">Toggle Grid</button>
+            <button onclick="clearMap()">Clear Map</button>
+
+            <h3>Roll Dice</h3>
+            <select id="dice">
+                <option value="4">D4</option>
+                <option value="6">D6</option>
+                <option value="8">D8</option>
+                <option value="10">D10</option>
+                <option value="12">D12</option>
+                <option value="20">D20</option>
+            </select>
+            <button onclick="rollDice()">Roll</button>
+            <p>Result: <span id="diceResult">-</span></p>
+        </div>
+
+        <div class="center-panel">
+            <h1>Game Map</h1>
+            <div id="map-container">
+                <canvas id="gameMap"></canvas>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h2>Session Notes</h2>
+            <textarea id="sessionNotes" placeholder="Write session notes here..."></textarea>
+            <button onclick="saveNotes()">Save Notes</button>
+
+            <h3>Active Players</h3>
+            <ul id="playerList">
+                <!-- Players will be listed here dynamically -->
+            </ul>
+        </div>
+
+    </div>
+    
+    <script src="js/dm.js"></script>
+</body>
+</html>

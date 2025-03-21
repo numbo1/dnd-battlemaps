@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your D&D Companion</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="header-item" id="logo">
-            <img src="images/Logo.png" alt="logo">
-        </a>
-        <a href="character.html" class="header-item" id="user_btn">
-            <img src="account-icon.png" alt="account">
-        </a>
+        <div class="header-container">
+            <a href="character.html" id="user_btn">
+                <img src="account-icon.png" alt="Account">
+            </a>
+            <a href="index.html" id="logo">
+                <img src="Images/Logo.png" alt="D&D Logo">
+            </a>
+        </div>
     </header>
 
     <main>
         <h2 class="role-heading">Choose Your Path</h2>
         <div class="which_flex">
-            <a href="dungeon_master.html" class="role_btn">
-                <img src="images/dm.png" alt="Dungeon Master">
+            <a href="battlemap.html" class="role_btn">
+                <img src="Images/DM.jpg" alt="Dungeon Master">
                 <span class="role_name">Dungeon Master</span>
             </a>
             <a href="character.html" class="role_btn">
-                <img src="adventurer-image.jpg" alt="Adventurer">
+                <img src="Images/Adventurer.png" alt="Adventurer">
                 <span class="role_name">Adventurer</span>
             </a>
         </div>
+
+        <!-- Role details appear here -->
+        <div id="role-details" class="role-details"></div>
     </main>
-    <script src="index.js"></script>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
