@@ -1,9 +1,16 @@
 @font-face {
     font-family: 'dragon-hunter-font';
     src: url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf');
+    src: url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('embedded-opentype'),
+         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('woff'),
+         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('truetype'),
+         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('svg');
     font-weight: normal;
     font-style: normal;
+
 }
+
+
 
 /* Role selection heading */
 .role-heading {

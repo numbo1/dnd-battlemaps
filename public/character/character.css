@@ -5,27 +5,6 @@ body {
     margin: 0;
 }
 
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-    background-color: white;
-    border-bottom: 2px solid #d8a444;
-}
-
-/* D&D Logo (Centered) */
-#logo img {
-    height: 80px;
-    transition: transform 0.2s ease;
-}
-
-#logo img:hover {
-    transform: scale(1.1);
-}
-
 /* Main Container */
 .container {
     display: flex;
@@ -43,7 +22,7 @@ header {
 
 .char_button{
     display: flex;
-    margin: 0.5rem;
+    margin: 0.2rem;
 }
 
 .char_button a {
@@ -51,8 +30,9 @@ header {
     padding: 3rem;
     border-style: solid;
     border-radius: 0.5rem;
-    width: 10rem;
+    min-width: 10rem;
     color: #d8a444;
+    font-size: 1.5rem;
 }
 
 #save{
@@ -68,7 +48,6 @@ header {
     text-align: center;
 }
 
-/* Make character table centered */
 .character-table {
     margin: auto;
     border-collapse: collapse;
@@ -99,7 +78,7 @@ header {
 .right-panel {
     width: 25%;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     overflow-y: auto;
     background-color: white;
@@ -137,20 +116,50 @@ header {
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none;
     appearance: none;
-    width: 1rem; /* Set a specific slider handle width */
-    height: 1rem; /* Slider handle height */
-    background: #d8a444; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 1rem;
+    height: 1rem;
+    background: #d8a444;
+    cursor: pointer;
     border-radius: 1rem;
 }
 
 .slider::-moz-range-thumb {
-    width: 1rem; /* Set a specific slider handle width */
-    height: 1rem; /* Slider handle height */
-    background: #d8a444; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 1rem;
+    height: 1rem;
+    background: #d8a444;
+    cursor: pointer;
+  }
+
+  .dimension_container{
+    display: flex;
+    height: 10%;
+    margin: 1rem;
+  }
+
+  .car_color{
+    height: 10%;
+    overflow-y: auto;
+    border-style: solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .car_eye-color{
+    height: 10%;
+    overflow-y: auto;
+    border-style: solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .car_hair{
+    height: 10%;
+    overflow-y: auto;
+    border-style: solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
   }
 
 
