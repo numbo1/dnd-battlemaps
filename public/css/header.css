@@ -33,7 +33,7 @@ a{
     text-decoration: none;
 }
 #logo img {
-    width: 100px; /* Try a slightly smaller size */
+    width: 15rem;
     height: auto;
     display: block;
 }

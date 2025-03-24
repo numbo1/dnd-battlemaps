@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #1a1a1a;
     color: white;
     margin: 0;
 }
@@ -11,9 +10,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #292929;
     padding: 10px;
     position: relative;
+    background-color: white;
     border-bottom: 2px solid #d8a444;
 }
 
@@ -38,10 +37,20 @@ header {
 /* Left Panel */
 .left-panel {
     width: 25%;
-    text-align: left;
-    padding: 20px;
-    background-color: #292929;
-    border-radius: 10px;
+    flex-direction: column;
+}
+
+.char_button{
+    display: flex;
+}
+
+.char_button a {
+    text-decoration: none;
+    padding: 3rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    width: 10rem;
+    color: #d8a444;
 }
 
 /* Center Panel */
@@ -80,46 +89,13 @@ header {
 /* Right Panel */
 .right-panel {
     width: 25%;
-    text-align: left;
     padding: 20px;
     background-color: #292929;
     border-radius: 10px;
 }
 
-/* Buttons */
-button {
-    background-color: #d8a444;
-    color: black;
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
-}
 
-button:hover {
-    background-color: #b5832d;
-}
 
-/* Select Dropdowns */
-select {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    font-size: 16px;
-}
 
-/* Height Change */
-.small img {
-    transform: scale(0.8);
-}
 
-.medium img {
-    transform: scale(1);
-}
 
-.tall img {
-    transform: scale(1.2);
-}
