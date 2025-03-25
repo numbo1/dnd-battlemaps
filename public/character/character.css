@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'dragon-hunter-font';
+    src: url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf');
+    src: url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('embedded-opentype'),
+         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('woff'),
+         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('truetype'),
+         url('fonts/dragon-hunter-font/DragonHunter-9Ynxj.otf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
     color: white;
     margin: 0;
@@ -52,30 +62,13 @@ body {
     text-align: center;
 }
 
-.character-table {
-    margin: auto;
-    border-collapse: collapse;
-}
-
-.character-table img {
-    width: 120px;
-    height: auto;
-}
-
-/* Ensure character parts are layered properly */
-.character-cell {
-    position: relative; /* Allows stacking of images */
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
-}
-
-/* Stack images inside table cells */
-.character-cell img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centers the images */
-    width: 100px; /* Adjust size as needed */
+#characterDisplay{
+    display: flex;
+    margin: 7rem;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Right Panel */
@@ -84,6 +77,7 @@ body {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    flex-direction: row;
     overflow-y: auto;
     background-color: white;
     border-style: solid;
@@ -97,13 +91,18 @@ body {
 .right-panel img{
     width: auto;
     height: 10rem;
-    padding: 0.5rem;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .img_box{
     border-style: solid;
     border-radius: 0.5rem;
-    padding: 0.1rem;
+    padding: 0.2rem;
+    width: auto;
+    
 }
 .img_box:hover{
     background-color: #ffc760;
@@ -185,6 +184,14 @@ body {
     border-style: solid;
     border-radius: 0.5rem;
     padding: 0.5rem;
+  }
+
+  #char_name{
+    font-family: 'dragon-hunter-font' , 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-color: #d8a444;
   }
 
 
