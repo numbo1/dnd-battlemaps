@@ -35,6 +35,10 @@ body {
     font-size: 1.5rem;
 }
 
+.char_button a:hover {
+    background-color: white;
+}
+
 #save{
     background-color: white;
 }
@@ -91,17 +95,37 @@ body {
 }
 
 .right-panel img{
-    width: 10rem;
+    width: auto;
     height: 10rem;
-    border-style: solid;
     padding: 0.5rem;
+}
+
+.img_box{
+    border-style: solid;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+}
+.img_box:hover{
+    background-color: #ffc760;
+    color: white;
+    border-color: #d8a444;
+}
+
+.right-panel img:hover{
+    background-color: #ffc760;
+    color: white;
+    border-color: #d8a444;
+}
+
+.car_img{
+    border-style: solid;
     border-radius: 0.5rem;
 }
 
 .slider{
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 10rem;
     height: 0.5rem;
     outline: none;
     opacity: 0.7;
@@ -135,6 +159,7 @@ body {
   .dimension_container{
     display: flex;
     height: 10%;
+    padding: 1rem;
     margin: 1rem;
   }
 
