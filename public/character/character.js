@@ -1,5 +1,5 @@
 
-
+// Class for character objects
 class character {
     constructor(name, image, strength, dexterity, constitution, intelligence, wisdom, charisma) {
         this.name = name;
@@ -14,6 +14,7 @@ class character {
     }
 }
 
+// Function for selecting and displaying characters
 function selectImage() {
     let images = document.querySelectorAll(".right-panel img");
     let characterDisplay = document.getElementById("characterDisplay");
