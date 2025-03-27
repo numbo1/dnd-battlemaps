@@ -1,10 +1,22 @@
+class Player {
+    constructor(name, img) {
+      this.name = name;
+      this.img = img;  
+    }
+}
+
+const Promethean = new Player("Promethean", "../Images/Promethean.jpg");
+
 // Example Players (Replace with real data later)
 const examplePlayers = [
-    { name: "John the Brave", avatar: "../Images/avatar1.png" },
+    { name: Promethean.name, avatar: Promethean.img},
     { name: "Elara the Mage", avatar: "../Images/avatar2.png" },
     { name: "Gorim the Barbarian", avatar: "../Images/avatar3.png" },
     { name: "Sylva the Rogue", avatar: "../Images/avatar4.png" }
 ];
+
+let selectedPlayer = null; // Declare a variable to store the selected player
+
 
 // Fetch Example Players
 function fetchPlayersFromDB() {
@@ -20,7 +32,7 @@ function fetchPlayersFromDB() {
         li.style.padding = "5px";
 
         const img = document.createElement("img");
-        img.src = player.avatar || "../Images/default-avatar.png";
+        img.src = player.avatar || Player.img;
         img.style.width = "40px";
         img.style.height = "40px";
         img.style.borderRadius = "50%"; // Circular border for players
@@ -31,12 +43,21 @@ function fetchPlayersFromDB() {
         name.style.color = "white";
         name.style.fontSize = "18px";
 
+        // Attach click event to select the player
+        li.addEventListener("click", () => selectPlayer(player));  // Select player when clicked
+
         li.appendChild(img);
         li.appendChild(name);
         ul.appendChild(li);
     });
 
     playerListDiv.appendChild(ul);
+}
+
+// Select a player from the dropdown
+function selectPlayer(player) {
+    selectedPlayer = player;  // Store the selected player
+    console.log(`Selected player: ${selectedPlayer.name}`);
 }
 
 // Toggle Player Dropdown (Closes Monster Dropdown if open)
@@ -144,22 +165,24 @@ document.getElementById("battleMap").addEventListener("click", function (event) 
     }
 
     // If in placement mode, add a new dragon and adjust its initial position
-    if (dragonPlacementMode) {
-        const dragon = document.createElement("img");
-        dragon.src = "Images/pin.png";
-        dragon.classList.add("dragon-marker");
+    if (dragonPlacementMode && selectedPlayer) {
+        const playerAvatar = selectedPlayer.avatar; // Get selected player's avatar
+
+        const avatar = document.createElement("img");
+        avatar.src = playerAvatar;
+        avatar.classList.add("avatar-marker");
 
         // Wait for image to load to get its dimensions correctly
-        dragon.onload = function () {
-            const dragonWidth = this.width;
-            const dragonHeight = this.height;
+        avatar.onload = function () {
+            const avatarWidth = this.width;
+            const avatarHeight = this.height;
 
-            this.style.left = `${x - dragonWidth / 2}px`;
-            this.style.top = `${y - dragonHeight / 2}px`;
+            this.style.left = `${x - avatarWidth / 2}px`;
+            this.style.top = `${y - avatarHeight / 2}px`;
         };
 
         // Click event to enable moving
-        dragon.addEventListener("mousedown", function (e) {
+        avatar.addEventListener("mousedown", function (e) {
             e.stopPropagation(); // Prevent triggering map click
             selectedDragon = this;
             this.classList.add("floating");
@@ -169,7 +192,7 @@ document.getElementById("battleMap").addEventListener("click", function (event) 
             offsetY = e.clientY - this.getBoundingClientRect().top;
         });
 
-        document.getElementById("battleMap").appendChild(dragon);
+        document.getElementById("battleMap").appendChild(avatar);
         dragonPlacementMode = false;
     }
 });
