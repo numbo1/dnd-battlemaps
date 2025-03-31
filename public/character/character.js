@@ -1,6 +1,6 @@
 
 // Class for character objects
-class character {
+class Character {
     constructor(name, image, strength, dexterity, constitution, intelligence, wisdom, charisma) {
         this.name = name;
         this.image = image;
