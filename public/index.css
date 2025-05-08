@@ -138,4 +138,8 @@ header {
     margin-top: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
 }
